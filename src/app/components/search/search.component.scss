@@ -1,0 +1,66 @@
+@import 'src/styles.scss';
+
+.form-input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+._form-field {
+  width: 20%;
+  margin: 0.5rem;
+}
+
+.date_input {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border: 1px solid $primary;
+}
+
+._rbutton {
+  padding: 0.5rem;
+  background-color: $secondary;
+  color: $primary;
+  font-size: 1.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  border-style: solid;
+}
+
+._rbutton:hover {
+  background-color: $primary;
+  color: $secondary;
+  transition: background-color 100ms linear;
+}
+
+.search_form {
+  text-align: center;
+}
+
+input.ng-touched.ng-invalid {
+  border-color: $red-error;
+}
+
+@media only screen and (max-width: 1279px) {
+
+  ._form-field {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .form-input {
+    flex-direction: column;
+  }
+
+  ._form-field {
+    width: 100%;
+  }
+
+  ._rbutton {
+    width: 100%;
+  }
+}

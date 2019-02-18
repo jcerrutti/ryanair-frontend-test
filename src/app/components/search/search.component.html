@@ -1,0 +1,22 @@
+<div class="search">
+  <form class="search_form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-input">
+      <div class="_form-field">
+        <app-airport-autocomplete [form]="form" [formField]="'departureAirport'"
+                                  [inputName]="'Departure'"
+                                  [list]="airports"></app-airport-autocomplete>
+      </div>
+      <div class="_form-field">
+        <app-airport-autocomplete [form]="form" [formField]="'destinationAirport'"
+                                  [inputName]="'Destination'"
+                                  [list]="destinationAirports"></app-airport-autocomplete>
+      </div>
+      <input class="_form-field date_input" type="date" name="departureDate" formControlName="departureDate"
+             [min]="today | date:'yyyy-MM-dd'" [ngModel]="today | date:'yyyy-MM-dd'" required>
+      <input class="_form-field date_input" type="date" name="returnDate" formControlName="returnDate" required
+             [min]="today | date:'yyyy-MM-dd'" [ngModel]="today | date:'yyyy-MM-dd'">
+    </div>
+    <button class="_rbutton">Search</button>
+  </form>
+  <router-outlet></router-outlet>
+</div>

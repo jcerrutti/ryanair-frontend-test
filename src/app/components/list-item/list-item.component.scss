@@ -1,0 +1,35 @@
+@import 'src/styles.scss';
+
+:host {
+  display: block;
+  border-bottom: 2px solid grey;
+  overflow: hidden;
+  padding: 0.7rem;
+  color: $primary;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+:host:hover {
+  background-color: $primary;
+  color: $secondary;
+  transition: background-color 200ms linear;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.item_name {
+  font-weight: bold;
+}
+
+.item_country {
+  margin-left: 1rem;
+}
+
+.item_code {
+  margin-left: auto;
+}

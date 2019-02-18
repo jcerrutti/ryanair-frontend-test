@@ -1,0 +1,17 @@
+@import 'src/styles.scss';
+
+.flight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flight-item > span {
+  margin: 0.5rem;
+}
+
+.flight-item_price {
+  font-weight: bold;
+  font-size: 1.4rem;
+}

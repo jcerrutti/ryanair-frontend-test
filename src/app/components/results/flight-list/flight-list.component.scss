@@ -1,0 +1,35 @@
+@import 'src/styles.scss';
+
+.flight-list {
+  padding: 2rem;
+  text-align: center;
+}
+
+.flight-list_item {
+  display: block;
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border: 1px solid $primary;
+}
+
+.flight-list_item:not(:last-child) {
+  border-bottom: 0px;
+}
+
+.flight-list_item:hover {
+  color: white;
+  background-color: $primary;
+  transition: background-color 100ms linear;
+}
+
+.error_message {
+  color: $red-error;
+}
+
+@media only screen and (max-width: 767px) {
+  .flight-list_item {
+    width: 100%;
+  }
+}

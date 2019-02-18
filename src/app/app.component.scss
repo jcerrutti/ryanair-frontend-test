@@ -1,0 +1,16 @@
+@import 'src/styles.scss';
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.app {
+  background-color: white;
+  padding: 1rem;
+}
+
+.app_title {
+  text-align: center;
+  color: $primary;
+}

@@ -1,0 +1,11 @@
+<div class="flight">
+  <div class="flight-item flight-item_date-departure">
+    From <span>{{ flight.dateFrom | date:'yyyy-MM-dd' }}</span>
+  </div>
+  <div class="flight-item flight-item_date-return">
+    To <span>{{ flight.dateTo | date:'yyyy-MM-dd' }}</span>
+  </div>
+  <div class="flight-item flight-item_price">
+    <span>{{ flight.price | currency: flight.currency }}</span>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="flight-list">
+  <ng-container *ngIf="!loading">
+    <app-flight-item
+      class="flight-list_item"
+      *ngFor="let flight of flightList" [flight]="flight">
+    </app-flight-item>
+  </ng-container>
+  <h3 *ngIf="noResults && !loading">Sorry, there are no results for this search, please broaden your search criteria and try again.</h3>
+  <h4 *ngIf="error" class="error_message">An error has ocurred. Please try again</h4>
+  <div *ngIf="loading" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
+
+

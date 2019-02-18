@@ -1,0 +1,10 @@
+<div #airportForm class="autocomplete" [formGroup]="form">
+  <div class="autocomplete_form-field" [formGroupName]="formField">
+    <input [placeholder]="inputName" formControlName="name"
+           autocomplete="off" required
+           class="_rinput" type="text" name="departure">
+    <div class="_autocomplete_list" *ngIf="filteredAirports.length && focusComponent">
+      <app-list [airports]="filteredAirports" (selected)="selectedAirport($event)"></app-list>
+    </div>
+  </div>
+</div>
